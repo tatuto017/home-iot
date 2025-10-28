@@ -1,0 +1,26 @@
+networks:
+  default:
+
+services:
+  gas:
+    platform: linux/amd64
+    container_name : ${project_name}
+    build:
+      dockerfile: ./Docker/Dockerfile
+    volumes:
+      - ./:/app
+      - ./Docker/config/bash_history:/root/.bash_history
+    ports:
+      - 8080:8080 # LINESimulator
+    environment:
+      TZ: Asia/Tokyo
+      LANG: ja_JP.UTF-8
+    tty: true
+    networks:
+      - default
+    entrypoint: >
+      sh -c "
+        cd /app && ncu -u && npm install
+        docker-entrypoint.sh
+        node
+      "
