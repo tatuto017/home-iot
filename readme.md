@@ -1,0 +1,15 @@
+# 自宅IoT
+
+## GAS
+| ディレクトリ | 機能 |
+| ---- | ---- |
+| iot-gw | ネットから自宅のnode-redへのGW |
+
+
+## RaspberryPI
+| ディレクトリ | 機能 |
+| ---- | ---- |
+| kitchen_pump | キッチンの除湿機のポンプ |
+| bed_pump | 寝室の除湿機のポンプ |
+| washroom_pump | 洗面所の除湿機のポンプ |
+| warmer | デスクのウォーマー電源 |
