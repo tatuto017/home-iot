@@ -13,3 +13,11 @@
 | bed_pump | 寝室の除湿機のポンプ |
 | washroom_pump | 洗面所の除湿機のポンプ |
 | warmer | デスクのウォーマー電源 |
+
+## node-red
+| ディレクトリ | 機能 |
+| ---- | ---- |
+| amazon-login | Amazonログイン |
+
+### Amazonログイン
+[node-red-contrib-alexa-remote2-applestrudel](https://flows.nodered.org/node/node-red-contrib-alexa-remote2-applestrudel)でAmazonのログインが必要なので、RaspberryPIのchromeでログインさせる
