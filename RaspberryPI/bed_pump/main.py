@@ -66,14 +66,13 @@ async def run_web_server():
     async def status(request):
         return '{"status":"ok"}'
 
-    @app.route("/toggle/on")
-    async def toggle_on(request):
-        toggle_pin.on()
-        return '{"status":"ok"}'
+    @app.route("/toggle/<command>")
+    async def toggle(request, command):
+        if command == "on":
+            toggle_pin.on()
+        if command == "off":
+            toggle_pin.off()
 
-    @app.route("/toggle/off")
-    async def toggle_off(request):
-        toggle_pin.off()
         return '{"status":"ok"}'
 
     # サーバー起動
