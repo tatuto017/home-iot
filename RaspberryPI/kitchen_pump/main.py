@@ -65,7 +65,7 @@ async def sensor_loop():
 
     over_count = 0
     # ポンプの作動の閾値
-    threshold = 2200
+    threshold = 1800
 
     while True:
         gc.collect()
