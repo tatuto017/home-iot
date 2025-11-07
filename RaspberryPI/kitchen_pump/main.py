@@ -63,10 +63,6 @@ async def wifi_connect():
 async def sensor_loop():
     global wlan
 
-    over_count = 0
-    # ポンプの作動の閾値
-    threshold = 1800
-
     while True:
         gc.collect()
         sensor_value = adc_pin.read_u16()
@@ -76,17 +72,6 @@ async def sensor_loop():
             await wifi_connect()
 
         urequests.get(f"{env.log_url}?device={env.device}&value={sensor_value}")
-
-        if sensor_value < threshold:
-            over_count += 1
-            if over_count > 10:
-                urequests.get(
-                    f"{env.trigger_url}?device={env.device}&value={sensor_value}"
-                )
-                await uasyncio.sleep(60)
-        else:
-            over_count = 0
-
         await uasyncio.sleep(1)
 
 
