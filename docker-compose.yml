@@ -4,11 +4,10 @@ networks:
 services:
   gas:
     platform: linux/amd64
-    container_name : ${project_name}
     build:
-      dockerfile: ./Docker/Dockerfile
+      dockerfile: ./Docker/gas
     volumes:
-      - ./:/app
+      - ./gas:/app
       - ./Docker/config/bash_history:/root/.bash_history
     ports:
       - 8080:8080 # LINESimulator

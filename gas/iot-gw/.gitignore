@@ -1,5 +1,4 @@
 node_modules
 .clasp.json
-.env
 bash_history
 package-lock.json
