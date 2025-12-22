@@ -5,6 +5,7 @@ import urequests
 from statistics import median
 import json
 import env
+import gc
 from microdot import Microdot, Response
 from machine import Pin, I2C, reset
 from amg88xx import AMG88XX
@@ -61,6 +62,18 @@ async def wifi_connect():
     urequests.get(f"{env.update_url}?device={env.device}&ipaddr={ipaddress}")
 
 
+async def check_process():
+    while True:
+        gc.collect()
+
+        try:
+            urequests.get(f"{env.check_url}?device={env.device}")
+        except:
+            await wifi_connect()
+
+        await uasyncio.sleep(60)
+
+
 async def run_web_server():
     # サーバー初期化
     app = Microdot()
@@ -72,6 +85,7 @@ async def run_web_server():
 
     @app.route("/data")
     async def data(request):
+        gc.collect()
         sensor.refresh()
         sensor_data = [[0 for _ in range(8)] for _ in range(8)]
         for row in range(8):
@@ -90,6 +104,13 @@ async def run_web_server():
 
         return '{"status":"ok"}'
 
+    @app.route("/run_check")
+    async def runc_check(request):
+        # チェックプロセス起動
+        uasyncio.create_task(check_process())
+
+        return '{"status":"ok"}'
+
     # サーバー起動
     app.run(port=80)
 
@@ -97,6 +118,9 @@ async def run_web_server():
 async def main():
     # WiFiに接続
     await wifi_connect()
+
+    # チェックプロセス起動
+    uasyncio.create_task(check_process())
 
     # Webサーバー
     await run_web_server()

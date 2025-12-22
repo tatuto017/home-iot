@@ -59,14 +59,12 @@ async def wifi_connect():
     requests.get(f"{env.update_url}?device={env.device}&ipaddr={ipaddress}")
 
 
-async def run_process():
-    global wlan
-
+async def check_process():
     while True:
         gc.collect()
 
         try:
-            urequests.get(f"{env.health_check_url}?device={env.device}")
+            urequests.get(f"{env.check_url}?device={env.device}")
         except:
             await wifi_connect()
 
@@ -91,9 +89,10 @@ async def run_web_server():
 
         return '{"status":"ok"}'
 
-    @app.route("/run")
-    async def run(request):
-        uasyncio.create_task(run_process())
+    @app.route("/run_check")
+    async def runc_check(request):
+        # チェックプロセス起動
+        uasyncio.create_task(check_process())
 
         return '{"status":"ok"}'
 
@@ -106,7 +105,7 @@ async def main():
     await wifi_connect()
 
     # プロセス起動
-    uasyncio.create_task(run_process())
+    uasyncio.create_task(check_process())
 
     # Webサーバ起動
     await run_web_server()
