@@ -13,7 +13,8 @@
 | bed_pump | 寝室の除湿機のポンプ |
 | washroom_pump | 洗面所の除湿機のポンプ |
 | warmer | デスクのウォーマー電源 |
-| router_plug | ルータ電源のリレースイッチ |
+| router_plug | スマートプラグのON/OFF制御 |
+| showroom | SHOWROOMの配信の自動保存 |
 
 ## node-red
 | ディレクトリ | 機能 |
