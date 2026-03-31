@@ -62,18 +62,6 @@ async def wifi_connect():
     urequests.get(f"{env.update_url}?device={env.device}&ipaddr={ipaddress}")
 
 
-async def check_process():
-    while True:
-        gc.collect()
-
-        try:
-            urequests.get(f"{env.check_url}?device={env.device}")
-        except:
-            await wifi_connect()
-
-        await uasyncio.sleep(60)
-
-
 async def run_web_server():
     # サーバー初期化
     app = Microdot()
@@ -95,22 +83,6 @@ async def run_web_server():
 
         return json.dumps({"result": data})
 
-    @app.route("/toggle/<command>")
-    async def toggle(request, command):
-        if command == "on":
-            toggle_pin.on()
-        if command == "off":
-            toggle_pin.off()
-
-        return '{"status":"ok"}'
-
-    @app.route("/run_check")
-    async def runc_check(request):
-        # チェックプロセス起動
-        uasyncio.create_task(check_process())
-
-        return '{"status":"ok"}'
-
     # サーバー起動
     app.run(port=80)
 
@@ -118,9 +90,6 @@ async def run_web_server():
 async def main():
     # WiFiに接続
     await wifi_connect()
-
-    # チェックプロセス起動
-    uasyncio.create_task(check_process())
 
     # Webサーバー
     await run_web_server()
