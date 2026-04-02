@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<coverage generated="1775138768900" clover="3.2.0">
+  <project timestamp="1775138768902" name="All files">
+    <metrics statements="61" coveredstatements="60" conditionals="18" coveredconditionals="15" methods="8" coveredmethods="8" elements="87" coveredelements="83" complexity="0" loc="61" ncloc="61" packages="1" files="2" classes="2"/>
+    <file name="SwitchBot.ts" path="/app/iot-gw/src/SwitchBot.ts">
+      <metrics statements="14" coveredstatements="14" conditionals="4" coveredconditionals="4" methods="3" coveredmethods="3"/>
+      <line num="2" count="6" type="stmt"/>
+      <line num="5" count="6" type="stmt"/>
+      <line num="9" count="1" type="stmt"/>
+      <line num="10" count="1" type="stmt"/>
+      <line num="14" count="3" type="stmt"/>
+      <line num="15" count="3" type="stmt"/>
+      <line num="16" count="3" type="stmt"/>
+      <line num="17" count="3" type="stmt"/>
+      <line num="30" count="3" type="stmt"/>
+      <line num="31" count="3" type="cond" truecount="2" falsecount="0"/>
+      <line num="32" count="2" type="stmt"/>
+      <line num="33" count="2" type="cond" truecount="2" falsecount="0"/>
+      <line num="34" count="1" type="stmt"/>
+      <line num="38" count="2" type="stmt"/>
+    </file>
+    <file name="main.ts" path="/app/iot-gw/src/main.ts">
+      <metrics statements="47" coveredstatements="46" conditionals="14" coveredconditionals="11" methods="5" coveredmethods="5"/>
+      <line num="9" count="1" type="stmt"/>
+      <line num="10" count="2" type="stmt"/>
+      <line num="11" count="2" type="stmt"/>
+      <line num="13" count="2" type="cond" truecount="1" falsecount="1"/>
+      <line num="14" count="2" type="stmt"/>
+      <line num="16" count="2" type="stmt"/>
+      <line num="17" count="2" type="stmt"/>
+      <line num="18" count="1" type="stmt"/>
+      <line num="20" count="1" type="stmt"/>
+      <line num="30" count="1" type="stmt"/>
+      <line num="31" count="2" type="stmt"/>
+      <line num="32" count="2" type="cond" truecount="2" falsecount="0"/>
+      <line num="33" count="1" type="stmt"/>
+      <line num="36" count="2" type="stmt"/>
+      <line num="44" count="1" type="stmt"/>
+      <line num="45" count="2" type="stmt"/>
+      <line num="46" count="2" type="stmt"/>
+      <line num="47" count="2" type="stmt"/>
+      <line num="49" count="2" type="cond" truecount="1" falsecount="1"/>
+      <line num="50" count="0" type="stmt"/>
+      <line num="53" count="2" type="stmt"/>
+      <line num="54" count="2" type="stmt"/>
+      <line num="55" count="2" type="stmt"/>
+      <line num="56" count="2" type="stmt"/>
+      <line num="58" count="2" type="cond" truecount="2" falsecount="0"/>
+      <line num="59" count="1" type="stmt"/>
+      <line num="63" count="1" type="stmt"/>
+      <line num="64" count="2" type="stmt"/>
+      <line num="65" count="2" type="stmt"/>
+      <line num="66" count="2" type="stmt"/>
+      <line num="67" count="2" type="stmt"/>
+      <line num="68" count="2" type="stmt"/>
+      <line num="70" count="1" type="cond" truecount="1" falsecount="1"/>
+      <line num="72" count="1" type="stmt"/>
+      <line num="73" count="1" type="stmt"/>
+      <line num="74" count="1" type="stmt"/>
+      <line num="84" count="1" type="stmt"/>
+      <line num="85" count="4" type="stmt"/>
+      <line num="89" count="1" type="cond" truecount="2" falsecount="0"/>
+      <line num="90" count="1" type="cond" truecount="2" falsecount="0"/>
+      <line num="91" count="1" type="stmt"/>
+      <line num="94" count="1" type="stmt"/>
+      <line num="95" count="1" type="stmt"/>
+      <line num="96" count="1" type="stmt"/>
+      <line num="97" count="1" type="stmt"/>
+      <line num="98" count="1" type="stmt"/>
+      <line num="99" count="1" type="stmt"/>
+    </file>
+  </project>
+</coverage>
