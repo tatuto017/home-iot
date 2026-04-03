@@ -13,14 +13,9 @@ build({
   outfile: "dist/main.gs",  // 出力ファイル（GASで読み込みやすい）
   format: "iife",
   globalName: "GAS",
-  minify: false,  // プロダクション時はminify
-  //minify: !noMinify,  // プロダクション時はminify
+  minify: false,
   sourcemap: isDebug,  // デバッグ時はソースマップ生成
-  //sourcemap: false,  // デバッグ時はソースマップ生成
   plugins: [GasPlugin],  // GAS特化プラグイン
-  banner: {
-    js: 'var global = this;',
-  },
   footer: {
     js: `
 function doGet(e) {

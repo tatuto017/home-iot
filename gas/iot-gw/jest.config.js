@@ -42,6 +42,7 @@ module.exports = {
     "src/**/*.ts",
     "!src/**/*.d.ts",
     "!src/types/**",
+    "!src/main.ts",
   ],
 
   // 8. ファイル拡張子
