@@ -21,3 +21,22 @@ services:
         docker-entrypoint.sh
         node
       "
+  claude:
+    platform: linux/amd64
+    build:
+      dockerfile: ./Docker/claude
+    volumes:
+      - ./claude:/app
+      - ./Docker/config/bash_history:/root/.bash_history
+    environment:
+      TZ: Asia/Tokyo
+      LANG: ja_JP.UTF-8
+    tty: true
+    networks:
+      - default
+    entrypoint: >
+      sh -c "
+        cd /app
+        docker-entrypoint.sh
+        node
+      "
