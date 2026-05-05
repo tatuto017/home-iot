@@ -1,5 +1,0 @@
-FROM node:22-bullseye
-WORKDIR /app
-RUN apt update && apt -y upgrade
-RUN curl -fsSL https://claude.ai/install.sh | bash
-RUN echo "PATH=$HOME/.local/bin:$PATH" >> ~/.bashrc
