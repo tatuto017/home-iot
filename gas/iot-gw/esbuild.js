@@ -21,9 +21,6 @@ build({
 function doGet(e) {
   return GAS.doGet(e);
 }
-function doPost(e) {
-  return GAS.doPost(e);
-}
 function healthCheckGW() {
   return GAS.healthCheckGW();
 }

@@ -1,18 +1,10 @@
 {
   "timeZone": "Asia/Tokyo",
-  "dependencies": {
-    "libraries": [
-      {
-        "userSymbol": "cCryptoGS",
-        "libraryId": "1IEkpeS8hsMSVLRdCMprij996zG6ek9UvGwcCJao_hlDMlgbWWvJpONrs",
-        "version": "4"
-      }
-    ]
-  },
+  "exceptionLogging": "STACKDRIVER",
+  "runtimeVersion": "V8",
+  "dependencies": {},
   "webapp": {
     "executeAs": "USER_DEPLOYING",
     "access": "ANYONE_ANONYMOUS"
-  },
-  "exceptionLogging": "STACKDRIVER",
-  "runtimeVersion": "V8"
+  }
 }
