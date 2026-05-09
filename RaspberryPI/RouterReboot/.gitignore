@@ -1,0 +1,7 @@
+# Added by code-review-graph
+.code-review-graph/
+.omc
+.venv_docker
+.infisical.json
+.mcp.json
+
