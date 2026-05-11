@@ -16,3 +16,8 @@ chromium=chromium-browser --remote-debugging-port=9222 --password-store=basic %U
 
 ## amazonの認証情報
 chromeに記憶させる
+
+## Pythonパッケージのインストール
+```
+uv pip install selenium
+```

@@ -15,6 +15,7 @@
 | warmer | デスクのウォーマー電源 |
 | live | LIVE配信の自動保存 |
 | RouterReboot | ルータを再起動する |
+| plug | スマートプラグのON/OFF (Bluetooth) |
 
 ## node-red
 | ディレクトリ | 機能 |
@@ -23,3 +24,11 @@
 
 ### Amazonログイン
 [node-red-contrib-alexa-remote2-applestrudel](https://flows.nodered.org/node/node-red-contrib-alexa-remote2-applestrudel)でAmazonのログインが必要なので、RaspberryPIのchromeでログインさせる
+
+### uvでのPython起動
+起動シェルに下記を追記する
+```
+. "$HOME/.local/bin/env"
+export UV_PROJECT_ENVIRONMENT=.venv
+export PATH=$PATH:$HOME/.local/bin
+```

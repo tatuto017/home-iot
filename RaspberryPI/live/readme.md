@@ -2,7 +2,8 @@
 
 ## Pythonモジュールのインストール
 ```
-pip install -r requirements.txt
+uv pip install TikTokLive
+uv pip install streamlink
 ```
 
 ## モジュール一覧

@@ -1,3 +1,2 @@
 TikTokLive
-asyncio
 streamlink
