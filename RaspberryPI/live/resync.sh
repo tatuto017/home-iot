@@ -1,5 +1,5 @@
 #!/bin/bash
 
 systemctl --user stop onedrive.service
-onedrive --sync --resync --synced-no-confirm
+yes | onedrive --resync --sync
 systemctl --user start onedrive.service
