@@ -2,7 +2,6 @@ export class SwitchBot {
   readonly api_url: string = 'https://api.switch-bot.com/v1.1';
 
   constructor(private token: string, private secret: string) {
-    this.api_url = '';
   }
 
   private getSignature(nonce: string, timestamp: string): string {
