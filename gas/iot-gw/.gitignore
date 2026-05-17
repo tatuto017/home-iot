@@ -2,3 +2,5 @@ node_modules
 .clasp.json
 bash_history
 package-lock.json
+coverage
+dist
